@@ -1,0 +1,6 @@
+interface:
+  display_name: "Springfield · Diseño"
+  short_description: "Guía visual y patrones de interfaz de Springfield"
+  default_prompt: "Usa $springfield-design para adaptar esta interfaz al diseño de Springfield."
+policy:
+  allow_implicit_invocation: true

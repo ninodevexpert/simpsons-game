@@ -1,0 +1,6 @@
+interface:
+  display_name: "Springfield · API"
+  short_description: "Contrato de datos, paginación y retratos de la API"
+  default_prompt: "Usa $springfield-api para implementar este cambio de datos en Springfield."
+policy:
+  allow_implicit_invocation: true
