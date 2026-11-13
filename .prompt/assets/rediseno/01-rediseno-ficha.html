@@ -1,0 +1,279 @@
+<!DOCTYPE html><html class="h-full bg-slate-950" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Expediente de Springfield - Marge Simpson</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=Titan+One&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            simpson: {
+              yellow: '#FED90F',
+              yellowDark: '#E5C000',
+              blue: '#70D1FE',
+              sky: '#DDF4FF',
+              hair: '#107DC0',
+              donut: '#FF69B4',
+              charcoal: '#1A1E24'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            cartoon: ['"Titan One"', 'cursive'],
+            badge: ['Bungee', 'cursive']
+          },
+          boxShadow: {
+            'comic': '6px 6px 0px 0px rgba(0, 0, 0, 0.95)',
+            'comic-sm': '3px 3px 0px 0px rgba(0, 0, 0, 0.95)',
+            'comic-lg': '10px 10px 0px 0px rgba(0, 0, 0, 0.95)',
+            'glow-cyan': '0 0 35px -5px rgba(112, 209, 254, 0.35)',
+            'modal': '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1)'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Patterns and Scrollbar -->
+<style data-purpose="custom-decorations">
+    /* Subtle cartoon comic dot background pattern */
+    .halftone-pattern {
+      background-image: radial-gradient(rgba(16, 125, 192, 0.15) 1.5px, transparent 1.5px);
+      background-size: 16px 16px;
+    }
+    
+    .springfield-sky-pattern {
+      background-color: #D4F1F9;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 60px, transparent 65px),
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50px, transparent 55px),
+        radial-gradient(rgba(112, 209, 254, 0.25) 1.5px, transparent 1.5px);
+      background-size: 100% 100%, 100% 100%, 18px 18px;
+    }
+
+    /* Custom scrollbar for modal content */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 7px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F1F5F9;
+      border-radius: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+<body class="h-full overflow-hidden text-slate-800 antialiased font-sans select-none">
+<!-- BEGIN: AmbientBackgroundPreview -->
+<!-- Contextual Blurred Background simulating the Springfield Character Archive grid -->
+<div aria-hidden="true" class="fixed inset-0 z-0 bg-[#0F172A] overflow-hidden">
+<!-- Springfield decorative glow blur spheres -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-simpson-yellow/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-40 right-10 w-[32rem] h-[32rem] rounded-full bg-simpson-blue/20 blur-3xl pointer-events-none"></div>
+<!-- Background Navigation Header (Blurred mockup context) -->
+<header class="w-full px-8 py-5 flex items-center justify-between border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-xl bg-simpson-yellow text-slate-950 font-cartoon flex items-center justify-center text-xl shadow-comic-sm">
+          S
+        </div>
+<span class="text-white font-bold tracking-wider uppercase text-sm">Springfield Archive DB</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="px-3 py-1 rounded-full bg-slate-800 text-xs font-semibold text-slate-300 border border-slate-700">Sector 7-G</span>
+<div class="w-8 h-8 rounded-full bg-slate-700 border border-slate-600"></div>
+</div>
+</header>
+<!-- Faux Grid Behind Modal (provides depth and immersive context) -->
+<main class="max-w-7xl mx-auto px-6 py-12 filter blur-sm opacity-35 scale-[0.99] transition-transform">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="h-64 rounded-2xl bg-slate-800/70 border border-slate-700 p-4 flex flex-col justify-end">
+<div class="h-4 w-2/3 bg-slate-700 rounded mb-2"></div>
+<div class="h-3 w-1/3 bg-slate-600 rounded"></div>
+</div>
+<div class="h-64 rounded-2xl bg-slate-800/70 border border-slate-700 p-4 flex flex-col justify-end ring-2 ring-simpson-yellow/50">
+<div class="h-4 w-2/3 bg-slate-700 rounded mb-2"></div>
+<div class="h-3 w-1/3 bg-slate-600 rounded"></div>
+</div>
+<div class="h-64 rounded-2xl bg-slate-800/70 border border-slate-700 p-4 flex flex-col justify-end">
+<div class="h-4 w-2/3 bg-slate-700 rounded mb-2"></div>
+<div class="h-3 w-1/3 bg-slate-600 rounded"></div>
+</div>
+<div class="h-64 rounded-2xl bg-slate-800/70 border border-slate-700 p-4 flex flex-col justify-end">
+<div class="h-4 w-2/3 bg-slate-700 rounded mb-2"></div>
+<div class="h-3 w-1/3 bg-slate-600 rounded"></div>
+</div>
+</div>
+</main>
+</div>
+<!-- END: AmbientBackgroundPreview -->
+<!-- BEGIN: ModalOverlay -->
+<div aria-labelledby="character-name" aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-slate-950/75 backdrop-blur-md overflow-y-auto" role="dialog">
+<!-- BEGIN: CharacterDossierCard -->
+<article class="relative w-full max-w-4xl bg-white rounded-3xl shadow-modal overflow-hidden border border-slate-200/90 flex flex-col max-h-[92vh] transition-all">
+<!-- Header Controls Bar -->
+<header class="relative z-20 px-6 sm:px-8 pt-5 pb-3 flex items-center justify-between border-b border-slate-100 bg-white/95 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 bg-slate-900 text-white text-xs font-black tracking-widest px-3 py-1 rounded-full shadow-comic-sm border border-slate-900 uppercase">
+<span class="w-2 h-2 rounded-full bg-simpson-yellow animate-pulse"></span>
+        Vecino #002
+      </span>
+<span class="inline-flex items-center bg-sky-50 text-slate-800 text-xs font-bold px-3 py-1 rounded-full border border-sky-200">
+<svg class="w-3.5 h-3.5 mr-1.5 text-simpson-hair" fill="currentColor" viewBox="0 0 20 20">
+<path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+</svg>
+        Familia Simpson
+      </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-simpson-yellow hover:text-slate-900 rounded-full transition-all border border-slate-200 shadow-sm active:scale-95" data-purpose="voice-preview-trigger" title="Escuchar frase característica" type="button">
+<svg class="w-3.5 h-3.5 text-slate-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.414 0-.75-.336-.75-.75V8.999c0-.414.336-.75.75-.75h2.24z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Voz</span>
+</button>
+<button aria-label="Cerrar modal" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-600 transition-all flex items-center justify-center border border-slate-200 active:scale-95" data-purpose="modal-close" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</header>
+<!-- Scrollable Central Body -->
+<div class="custom-scrollbar overflow-y-auto px-6 sm:px-8 py-6 space-y-6">
+<!-- Top Hero Avatar & Center Title Header -->
+<div class="flex flex-col items-center text-center">
+<!-- Large Circular Avatar with halo and ring -->
+<div class="relative mb-4">
+<div class="absolute inset-0 rounded-full bg-simpson-blue/20 blur-xl"></div>
+<div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full ring-4 ring-white shadow-comic-sm bg-gradient-to-b springfield-sky-pattern overflow-hidden flex items-end justify-center border-4 border-simpson-hair/30">
+<img alt="Marge Simpson" class="w-full h-full object-contain object-bottom drop-shadow-[0_10px_10px_rgba(16,125,192,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqMfx4-2fkmWE4WcfVNCXz4ohaUvbTJYoR6-XERspWlND-KiU5D8EE0ZxwmG-xU-ZtE817SjceoR1PC9WEaB6D9cMZ7dhAdeaw6zZhbC57sALHF1gZsVFCUZr-VS3zH3AjX0kNsPta3HcEbC_TcQZA8I99uV8NJGICVWFMnwAgx37F_FNFmO33proBY-h-bmOFpebdejeLauPIdFr4IZA8HtoQIMxongWBe6W8qOu5WsbX0aPz7a35-yezMueMnAdmzVk">
+</div>
+<span class="absolute bottom-1 right-2 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black bg-simpson-yellow text-slate-900 border border-slate-900 shadow-2xs">
+          #SP-002
+        </span>
+</div>
+<span class="text-[11px] font-black tracking-widest text-simpson-hair uppercase">
+        Expediente de Springfield
+      </span>
+<h1 class="font-cartoon text-3xl sm:text-4xl lg:text-5xl tracking-wide text-slate-900 italic leading-none mt-1" id="character-name">
+        MARGE SIMPSON
+      </h1>
+<p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">
+        (Marjorie Jacqueline Bouvier)
+      </p>
+<div class="inline-flex items-center gap-2 mt-3 px-3.5 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200/70 shadow-2xs">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span class="">Ama de casa / Desempleada</span>
+<span class="text-amber-400">•</span>
+<span class="text-slate-600 font-medium">Matriarca de Evergreen Terrace</span>
+</div>
+</div>
+<!-- Bento Grid Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Caja 1: Métricas Rápidas (3 columnas compactas en una tarjeta bento) -->
+<div class="md:col-span-3 grid grid-cols-3 gap-3 p-2 bg-slate-50/90 rounded-2xl border border-slate-200/90">
+<div class="p-3 bg-white rounded-xl shadow-xs border border-slate-100 text-center">
+<p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">Edad</p>
+<p class="text-base sm:text-lg font-extrabold text-slate-900">39 años</p>
+</div>
+<div class="p-3 bg-white rounded-xl shadow-xs border border-slate-100 text-center">
+<p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">Género</p>
+<p class="text-base sm:text-lg font-extrabold text-slate-900">Femenino</p>
+</div>
+<div class="p-3 bg-white rounded-xl shadow-xs border border-slate-100 text-center">
+<p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">Estado</p>
+<div class="inline-flex items-center justify-center text-emerald-600 font-extrabold text-base sm:text-lg">
+<span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5"></span>
+            Vivo
+          </div>
+</div>
+</div>
+<!-- Caja 2: Su historia (Biografía) -->
+<div class="md:col-span-2 p-5 bg-white rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between space-y-3">
+<div>
+<h2 class="text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-2 mb-2">
+<span class="w-2 h-4 bg-simpson-yellow rounded-full inline-block"></span>
+            Su historia
+          </h2>
+<p class="text-xs sm:text-[13.5px] leading-relaxed text-slate-600 text-justify">
+            Marjorie Jacqueline "Marge" Simpson (nacida Bouvier, el 19 de marzo) es la devota ama de casa y matriarca del clan Simpson. Madre de Bart, Lisa y Maggie, y leal compañera de Homer, Marge representa la brújula moral inquebrantable de la familia con su icónica voz ronca y paciencia infinita. Más allá de su labor en el hogar, ha explorado facetas audaces como agente de policía, empresaria de pretzels y activista contra la violencia en los medios.
+          </p>
+</div>
+<div class="pt-2 flex items-center gap-2 text-[11px] text-slate-400 border-t border-slate-100">
+<span class="font-semibold text-slate-600">Rol clave:</span> Pacificadora familiar y guardiana moral de Springfield
+        </div>
+</div>
+<!-- Caja 5: Residencia y Registro Oficial -->
+<div class="p-5 bg-gradient-to-br from-slate-50 to-sky-50/50 rounded-2xl border border-sky-200/70 shadow-xs flex flex-col justify-between space-y-4">
+<div>
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-simpson-hair">
+            Ubicación Residencial
+          </span>
+<div class="flex items-center gap-3 mt-2">
+<div class="w-10 h-10 rounded-xl bg-simpson-hair/15 text-simpson-hair flex items-center justify-center font-bold text-base shrink-0">
+              742
+            </div>
+<div>
+<p class="text-xs font-bold text-slate-900 leading-snug">Evergreen Terrace</p>
+<p class="text-[11px] text-slate-500">Springfield, EE.UU.</p>
+</div>
+</div>
+</div>
+
+</div>
+<!-- Caja 3: Primera Aparición en la Serie -->
+<div class="md:col-span-3 p-4 rounded-2xl bg-sky-50/70 border border-sky-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-simpson-yellow text-slate-950 font-black flex flex-col items-center justify-center shadow-comic-sm border-2 border-slate-900 shrink-0">
+<span class="text-[10px] uppercase font-bold leading-none">Ep</span>
+<span class="text-lg leading-tight font-cartoon">01</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-black uppercase tracking-wider text-simpson-hair">Primera Aparición</span>
+<span class="text-[10px] font-bold text-slate-600 uppercase tracking-wider px-2 py-0.5 bg-white rounded border border-slate-200 shadow-2xs">
+                Clásico
+              </span>
+</div>
+<h3 class="text-sm sm:text-base font-bold text-slate-900 leading-snug mt-0.5">
+              Simpsons Roasting on an Open Fire
+            </h3>
+<p class="text-xs text-slate-500">
+              Especial de Navidad · Temporada 1 · Episodio 1 (1989)
+            </p>
+</div>
+</div>
+<span class="text-xs font-semibold text-slate-500 sm:text-right">
+          Debut televisivo oficial de la familia
+        </span>
+</div>
+<!-- Caja 4: Citas Célebres (En sus propias palabras) -->
+<div class="md:col-span-3 space-y-2">
+<h2 class="text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-2">
+<span class="w-2 h-4 bg-simpson-donut rounded-full inline-block"></span>
+          En sus propias palabras
+        </h2>
+<div class="flex gap-3 overflow-x-auto pb-2 pt-1 custom-scrollbar snap-x snap-mandatory -mx-1 px-1"><div class="min-w-[260px] sm:min-w-[280px] p-3.5 rounded-xl bg-amber-50/80 border-l-4 border-l-simpson-yellow border border-amber-200/60 shadow-xs relative snap-start shrink-0 flex flex-col justify-between"><span class="text-2xl font-serif text-amber-400 absolute top-2 right-3 select-none leading-none">“</span><p class="text-xs sm:text-[13px] font-bold text-slate-800 italic pr-4">“Hrmmm...”</p><span class="text-[10px] font-medium text-slate-500 mt-2 block">— Su clásico gruñido de desaprobación</span></div><div class="min-w-[260px] sm:min-w-[280px] p-3.5 rounded-xl bg-amber-50/80 border-l-4 border-l-simpson-yellow border border-amber-200/60 shadow-xs relative snap-start shrink-0 flex flex-col justify-between"><span class="text-2xl font-serif text-amber-400 absolute top-2 right-3 select-none leading-none">“</span><p class="text-xs sm:text-[13px] font-bold text-slate-800 italic pr-4">“Now it's Marge's time to shine!”</p><span class="text-[10px] font-medium text-slate-500 mt-2 block">— Momento de optimismo matriarcal</span></div><div class="min-w-[260px] sm:min-w-[280px] p-3.5 rounded-xl bg-amber-50/80 border-l-4 border-l-simpson-yellow border border-amber-200/60 shadow-xs relative snap-start shrink-0 flex flex-col justify-between"><span class="text-2xl font-serif text-amber-400 absolute top-2 right-3 select-none leading-none">“</span><p class="text-xs sm:text-[13px] font-bold text-slate-800 italic pr-4">“At times like this, all you can do is laugh.”</p><span class="text-[10px] font-medium text-slate-500 mt-2 block">— Filosofía ante la locura cotidiana</span></div><div class="min-w-[260px] sm:min-w-[280px] p-3.5 rounded-xl bg-amber-50/80 border-l-4 border-l-simpson-yellow border border-amber-200/60 shadow-xs relative snap-start shrink-0 flex flex-col justify-between"><span class="text-2xl font-serif text-amber-400 absolute top-2 right-3 select-none leading-none">“</span><p class="text-xs sm:text-[13px] font-bold text-slate-800 italic pr-4">“I guess one person really can make a difference...”</p><span class="text-[10px] font-medium text-slate-500 mt-2 block">— ...but most of the time, why bother?</span></div></div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Bar / Footer CTA -->
+<footer class="px-6 sm:px-8 py-3.5 bg-slate-50/95 border-t border-slate-200 flex items-center justify-center"><div class="flex items-center gap-2 text-xs font-semibold text-slate-500"><svg class="w-4 h-4 text-simpson-hair shrink-0" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path></svg><span class="">Verificado por el Archivo Municipal de Springfield</span></div></footer>
+</article>
+<!-- END: CharacterDossierCard -->
+</div>
+<!-- END: ModalOverlay -->
+
+
+</body></html>
