@@ -10,7 +10,9 @@ Como fan de Los Simpson, quiero que la ficha de cada personaje tenga una present
 Adaptar la ficha de detalle al diseño de la imagen adjunta, respetando la identidad visual de Springfield y el comportamiento actual.
 
 ## Referencia visual
-[Adjuntar imagen del diseño]
+Referencias
+[assets/rediseno]
+
 - Tomar la imagen como guía de estructura, jerarquía y estilo.
 - Si algún elemento del diseño no tiene equivalente en los datos disponibles, no inventarlo: proponer la alternativa más cercana o indicarlo.
 
